@@ -1,0 +1,31 @@
+{
+  "schema": "glaciereq.proof-receipt.v1",
+  "repository": "GlacierEQ/nasa-telemetry-anomaly-receipt",
+  "source_sha": "71aff6a5902690c51f9932059749391b778df76d57b7e87fa9ec7c4fe202bbd8",
+  "proof_id": "elite-nasa-telemetry-anomaly-receipt-1786335149",
+  "environment": {
+    "python": "/Users/kcbflux/job-app/excellence/.venv-elite/bin/python",
+    "PYTHONPATH": "/Users/kcbflux/job-app/repos/nasa-telemetry-anomaly-receipt:/Users/kcbflux/job-app/repos/nasa-telemetry-anomaly-receipt/src",
+    "entry": "unittest"
+  },
+  "tests": [
+    "/Users/kcbflux/job-app/excellence/.venv-elite/bin/python -m unittest discover -s tests -v (x2)"
+  ],
+  "adversarial_tests": [
+    "tests/test_adversarial.py"
+  ],
+  "runtime": {
+    "operate": "scripts/operate.py (x2)",
+    "dual_run_ok": true,
+    "proof_dual_run_ok": true
+  },
+  "result": "PASS",
+  "limitations": [
+    "not production deployed",
+    "reference implementation only"
+  ],
+  "timestamp": "2026-08-10T04:12Z",
+  "artifact_hashes": {
+    "operability_receipt": "02e817c9dcf931e5dd7b6a5a8a8f80ed3b70ce984353d42b3e2cb8f43f799fd9"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "schema": "glaciereq.promotion-authority-grant.v1",
+  "repository": "GlacierEQ/nasa-telemetry-anomaly-receipt",
+  "source_sha": "71aff6a5902690c51f9932059749391b778df76d57b7e87fa9ec7c4fe202bbd8",
+  "proof_receipt_digest": "172b0c7baeab36ae496895132ad7393dd60a931660dd8fd7c22a3f9f3cb854ef",
+  "not_after": 1788927149.234226,
+  "mac": "ae24ccc7c84110895c4311c68b06d92f15e94e022cd356910baa7e3246f8e586",
+  "issuer": "local_operator_promotion_authority",
+  "verified": true,
+  "secret_ref": "src/promotion_authority.py::LOCAL_OPERATOR_SECRET"
+}

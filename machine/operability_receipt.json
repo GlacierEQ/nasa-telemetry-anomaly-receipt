@@ -1,0 +1,27 @@
+{
+  "schema": "glaciereq.operability-receipt.v1",
+  "repository": "GlacierEQ/nasa-telemetry-anomaly-receipt",
+  "at": "2026-08-10T04:12Z",
+  "source_sha": "71aff6a5902690c51f9932059749391b778df76d57b7e87fa9ec7c4fe202bbd8",
+  "entry": "scripts/operate.py",
+  "primary_output": {
+    "module": "telemetry",
+    "ok": true,
+    "repository": "GlacierEQ/nasa-telemetry-anomaly-receipt",
+    "smoke": {
+      "args": [
+        "'sample_channel'",
+        "1.0"
+      ],
+      "content_checked": true,
+      "invoked": true,
+      "kind": "class",
+      "method": "observe",
+      "module_local": true,
+      "name": "TelemetryAnomalyMonitor",
+      "result": "AnomalyReceipt(channel='sample_channel', value=1.0, severity=<Severity.HARD: 'HARD'>, residual=0.0, suppressed=False, fingerprint='334f3fd0616e66dc77e055aacd5a3291f9c063b525d3c567239580bd527c6d91')"
+    }
+  },
+  "dual_run_ok": true,
+  "result": "PASS"
+}
