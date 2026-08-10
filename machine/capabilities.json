@@ -1,1 +1,23 @@
-{"capabilities": ["hyper-scaling"]}
+{
+  "schema": "glaciereq.repo-capabilities.v1",
+  "repository": "GlacierEQ/nasa-telemetry-anomaly-receipt",
+  "capability_family": "telemetry_anomaly_evidence_receipts",
+  "capabilities": [
+    "deterministic-anomaly-receipts",
+    "warn-hard-threshold-classification",
+    "threshold-residual-evidence",
+    "unknown-channel-hard-anomaly",
+    "registered-ack-suppression-marking",
+    "suppression-visible-receipt-fingerprints"
+  ],
+  "evidence_refs": [
+    "src/telemetry.py",
+    "go/tlm/tlm.go",
+    "tests/test_telemetry.py",
+    "tests/test_adversarial.py",
+    "go/tlm/tlm_test.go",
+    "machine/proof_receipt.json",
+    "machine/canonical-position.json"
+  ],
+  "truth_boundary": "Repository-local simulated telemetry anomaly evidence mechanisms only. No NASA adoption, production spacecraft telemetry deployment, or exercised integration with the command-authority sibling is implied."
+}
