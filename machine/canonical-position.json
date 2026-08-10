@@ -1,0 +1,65 @@
+{
+  "schema": "glaciereq.repo-canonical-position.v1",
+  "repository": "GlacierEQ/nasa-telemetry-anomaly-receipt",
+  "position_state": "RESOLVED",
+  "role": "company_specific_specialist_system",
+  "company_target": "NASA",
+  "canonical_identity": "telemetry-anomaly-receipt",
+  "unique_value": [
+    "every telemetry observation produces a deterministic receipt carrying channel, value, severity, residual, suppression state, and fingerprint",
+    "unknown telemetry channels fail visibly as HARD anomalies rather than being silently ignored",
+    "warning and hard thresholds produce explicit residual distance from the active limit so anomaly magnitude is preserved",
+    "acknowledgement can mark a non-nominal receipt suppressed only when an explicitly registered ack token is presented; the anomaly receipt is still emitted"
+  ],
+  "lineage_distinction": {
+    "GlacierEQ/nasa-command-authority-half-life": "owns time-bounded command authority and replay-safe execution authorization; complementary command plane, not telemetry anomaly evidence"
+  },
+  "capability_contribution": {
+    "family": "telemetry_anomaly_evidence_receipts",
+    "extractable_mechanisms": [
+      "deterministic anomaly receipts",
+      "warn/hard threshold classification",
+      "threshold residual evidence",
+      "unknown-channel hard anomaly",
+      "registered-ack suppression marking",
+      "suppression-visible receipt fingerprints"
+    ],
+    "ownership": "This repository remains the owning NASA-specialist implementation of deterministic telemetry anomaly evidence receipts; capability extraction preserves repository identity and lineage."
+  },
+  "integration_policy": {
+    "preserve_repository_identity": true,
+    "preserve_lineage": true,
+    "presentation_independent": true,
+    "size_or_loc_not_dispositive": true,
+    "absorption_requires_functional_equivalence": true,
+    "absorption_requires_proof_equivalence": true
+  },
+  "relationships": [
+    {
+      "repository": "GlacierEQ/nasa-command-authority-half-life",
+      "kind": "COMPLEMENTARY_COMMAND_AUTHORITY_COMPONENT",
+      "integration_state": "NOT_CLAIMED"
+    }
+  ],
+  "next_evolution": "Add time-series window provenance, signed sensor/source identity, stale-sample and sequence-gap detection, bounded acknowledgement expiry/ownership, and anomaly-to-command evidence linking while preserving visible receipts for every suppression decision.",
+  "evidence_refs": [
+    "README.md",
+    "ISSUE_CONTRACT.md",
+    "src/telemetry.py",
+    "go/tlm/tlm.go",
+    "tests/test_telemetry.py",
+    "tests/test_adversarial.py",
+    "go/tlm/tlm_test.go",
+    "machine/target-contract.json",
+    "machine/proof_receipt.json",
+    "machine/operability_receipt.json",
+    "machine/promotion_authority.json"
+  ],
+  "nonclaims": [
+    "no NASA affiliation",
+    "no NASA internal architecture claim",
+    "simulation/reference implementation only",
+    "not a production spacecraft telemetry deployment",
+    "repository relationships do not imply exercised integration"
+  ]
+}
